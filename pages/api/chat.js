@@ -1,7 +1,8 @@
 
 export default async function handler(req, res) {
   const { mensaje } = req.body;
-
+  
+  console.log("🔑 OPENAI_API_KEY:", process.env.OPENAI_API_KEY);
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
